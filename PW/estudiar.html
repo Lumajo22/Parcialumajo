@@ -1,0 +1,159 @@
+// Ejercicio 1359: Contar el número de vocales de un texto con una expresión regular.
+
+function contarVocales(texto) {
+    return texto.match(/[aeiouáéíóú]/gi).length;
+}
+
+console.log(contarVocales('JavaScript'));   // 3
+console.log(contarVocales('programación'));   // 5
+console.log(contarVocales('JAVASCRIPT'));   // 3
+
+
+// Ejercicio 1370: Con una expresión regular comprobar si un texto tiene caracteres alfabéticos y guiones.
+
+function esTextoAlfabetico(texto) {
+    let patron = /^[a-z_\-]+$/i;
+
+    return patron.test(texto);
+}
+
+console.log(esTextoAlfabetico('ABC-XYZ'));  // true
+console.log(esTextoAlfabetico('ABC-XYZ-MNO'));  // true
+console.log(esTextoAlfabetico('ABC_XYZ_MNO'));  // true
+console.log(esTextoAlfabetico('ABC_XYZ-MNO'));  // true
+
+console.log();
+
+console.log(esTextoAlfabetico('ABC-123-MNO'));  // false
+console.log(esTextoAlfabetico('852-123-456'));  // false
+
+// EJERCICIO CALCULAR EDAD
+function calcularEdad(fecha) {
+    let diferencia = Date.now() - fecha.getTime();
+
+    fecha = new Date(diferencia);
+
+    return Math.abs(fecha.getUTCFullYear() - 1970);
+}
+
+console.log(calcularEdad(new Date(1964, 9, 8)));    // 57
+console.log(calcularEdad(new Date(2000, 8, 11)));    // 21
+
+//EJERCICIO CALCULAR VOCALES
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Main {
+    public static void main(String[] args) {
+        String sentence = "Hola soy María";
+        int vowelCount = countVowels(sentence);
+        System.out.println("Número de vocales en la oración: " + vowelCount);
+    }
+
+    public static int countVowels(String input) {
+        Pattern pattern = Pattern.compile("[aeiouAEIOU]");
+        Matcher matcher = pattern.matcher(input);
+        int count = 0;
+        while (matcher.find()) {
+            count++;
+        }
+        return count;
+    }
+}
+
+//EJERCICIO VALIDAR UMERO DE TELEFONO
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Main {
+    public static void main(String[] args) {
+        String phoneNumber = "123-456-7890";
+        if (validatePhoneNumber(phoneNumber)) {
+            System.out.println("Número de teléfono válido.");
+        } else {
+            System.out.println("Número de teléfono inválido.");
+        }
+    }
+
+    public static boolean validatePhoneNumber(String phoneNumber) {
+        // Expresión regular para validar un número de teléfono en formato xxx-xxx-xxxx
+        String regex = "\\d{3}-\\d{3}-\\d{4}";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(phoneNumber);
+        return matcher.matches();
+    }
+}
+
+// numeros de un texto
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Main {
+    public static void main(String[] args) {
+        String text = "Este es un texto con algunos números como 123 y 4567.";
+        int numberCount = countNumbers(text);
+        System.out.println("Número de números en el texto: " + numberCount);
+    }
+
+    public static int countNumbers(String input) {
+        Pattern pattern = Pattern.compile("\\d+");
+        Matcher matcher = pattern.matcher(input);
+        int count = 0;
+        while (matcher.find()) {
+            count++;
+        }
+        return count;
+    }
+}
+
+
+CORREO ELECTRONICO: String regex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+VALIDAR CONTRASEÑA: String regex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$";
+VALIDAR FORMATO DE FECHA: String regex = "^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\\d{4}$";
+ALIDACION NUMEROS ENTEROS:String regex = "^-?\\d+$";
+VALIDACION URL:String regex = "^(http|https)://[a-zA-Z0-9\\-.]+\\.[a-zA-Z]{2,}(?:/[^\\s]*)?$";
+String regex = "^(http|https)://[a-zA-Z0-9\\-.]+\\.[a-zA-Z]{2,}(?:/[^\\s]*)?$"; 
+
+//extraer vocales de un cadena
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Main {
+    public static void main(String[] args) {
+        String text = "Esta es una cadena con algunas vocales.";
+        String vowels = extractVowels(text);
+        System.out.println("Vocales en el texto: " + vowels);
+    }
+
+    public static String extractVowels(String input) {
+        Pattern pattern = Pattern.compile("[aeiouAEIOU]");
+        Matcher matcher = pattern.matcher(input);
+        StringBuilder result = new StringBuilder();
+        while (matcher.find()) {
+            result.append(matcher.group());
+        }
+        return result.toString();
+    }
+}
+// extraer numeros 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Main {
+    public static void main(String[] args) {
+        String text = "Esta cadena contiene números como 123 y 4567.";
+        String numbers = extractNumbers(text);
+        System.out.println("Números en el texto: " + numbers);
+    }
+
+    public static String extractNumbers(String input) {
+        Pattern pattern = Pattern.compile("\\d+");
+        Matcher matcher = pattern.matcher(input);
+        StringBuilder result = new StringBuilder();
+        while (matcher.find()) {
+            result.append(matcher.group()).append(" ");
+        }
+        return result.toString().trim(); // Eliminar espacio adicional al final y al inicio
+    }
+}

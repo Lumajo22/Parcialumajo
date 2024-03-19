@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barra de Menú</title>
+<link rel="stylesheet" href="estilos.css">
+<script src="formulario.js"></script>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#productos">Productos</a></li>
+    <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+    <li><a href="#login">Log In</a></li>
+  </ul>
+</nav>
+
+<section id="inicio">
+  <h2>Inicio</h2>
+  <!-- Contenido de la página de inicio -->
+</section>
+
+<section id="productos">
+  <h2>Productos</h2>
+  <!-- Contenido de la página de productos -->
+</section>
+
+<section id="sobre-nosotros">
+  <h2>Sobre Nosotros</h2>
+  <!-- Contenido de la página de sobre nosotros -->
+</section>
+
+<section id="login">
+  <h2>Log In</h2>
+  <!-- Contenido de la página de log in -->
+</section>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario de Registro</title>
+</head>
+<body>
+
+<h1>Formulario de Registro</h1>
+
+<form id="registroForm">
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required>
+  </div>
+  <div>
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" required>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+  </div>
+  <div>
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" required>
+  </div>
+  <div>
+    <label for="estrato">Estrato:</label>
+    <input type="number" id="estrato" required>
+  </div>
+  <div>
+    <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+    <input type="date" id="fechaNacimiento" required>
+  </div>
+  <div>
+    <label for="grupoSanguineo">Grupo Sanguíneo:</label>
+    <select id="grupoSanguineo" required>
+      <option value="A+">A+</option>
+      <option value="A-">A-</option>
+      <option value="B+">B+</option>
+      <option value="B-">B-</option>
+      <option value="AB+">AB+</option>
+      <option value="AB-">AB-</option>
+      <option value="O+">O+</option>
+      <option value="O-">O-</option>
+    </select>
+  </div>
+  <div>
+    <label for="genero">Género:</label>
+    <input type="radio" id="femenino" name="genero" value="Femenino" required>
+    <label for="femenino">Femenino</label>
+    <input type="radio" id="masculino" name="genero" value="Masculino" required>
+    <label for="masculino">Masculino</label>
+  </div>
+  <div>
+    <label for="actividad">Actividad Favorita:</label>
+    <select id="actividad" required>
+      <option value="Futbol">Futbol</option>
+      <option value="Baloncesto">Baloncesto</option>
+      <option value="Voleibol">Voleibol</option>
+      <option value="Ciclismo">Ciclismo</option>
+    </select>
+  </div>
+  <div>
+    <button type="submit">Registrar</button>
+    <button type="button" onclick="cancelarRegistro()">Cancelar</button>
+  </div>
+</form>
+
+
+
+</body>
+</html>
+
+
+</body>
+</html>

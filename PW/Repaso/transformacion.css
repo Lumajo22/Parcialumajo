@@ -1,0 +1,35 @@
+    html {
+        font-family: "Chilanka", cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+    body h1 {
+    font-size: 4 rem;
+    text-align: center;
+    background-color: #364552;
+    color:white;
+    padding: 3rem 2rem ;
+    }
+body {
+    margin: 0;
+    background-color:#efefef;
+}
+body {
+    width: 500px;
+    margin: 0 auto;
+}
+section p{
+    background-color: #fff;
+    margin: 1rem 0;
+    border-radius: 0.5 rem;
+}
+footer {
+    background-color: #222;
+    padding: 3 rem;
+    color: #fff;
+}
+footer  {
+    float: center ;
+
+}
